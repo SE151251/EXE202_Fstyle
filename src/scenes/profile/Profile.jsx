@@ -1,20 +1,24 @@
 import React from 'react';
 import { useState } from 'react';
 import { Container, Grid, Typography, Avatar, Paper, Card, CardContent, CardMedia, Button } from '@mui/material';
-
+import {mockDataUser, deleteUser} from "../../data_fake/data_post"
 const ProfilePage = () => {
   const [isEditing, setIsEditing] = useState(false);
-
+  console.log("before push ",mockDataUser);
   const handleEditClick = () => {
     setIsEditing(true);
-  };
-
+  }
   const handleSaveClick = () => {
     // Xử lý lưu thông tin cá nhân và bài post
     setIsEditing(false);
   };
+  const deleteUserFake = () => {
+  deleteUser(1)
+  console.log(mockDataUser);
+  };
   return (
     <Container maxWidth="md">
+      {/* <Button onClick={() => deleteUserFake()}>Click add</Button> */}
       <Paper
         sx={{
           height: '300px',

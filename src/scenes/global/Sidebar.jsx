@@ -47,7 +47,7 @@ const Sidebar = () => {
   return (
     <Box
       sx={{
-        height: "140vh",
+        height: "auto",
         "& .pro-sidebar-inner": {
           background: `${colors.primary[400]} !important`,
         },
